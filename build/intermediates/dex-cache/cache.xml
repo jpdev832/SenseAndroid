@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/joelparrish/Documents/development/android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-a7cdf56ae20862b06f23bc9007dfc137b99c1238.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/exploded-aar/SenseAndroid/senseChallengeClient/unspecified/libs/mongo-java-driver-2.12.3-javadoc.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0097032b2097e85729e576ca0c96a0a4d83a9909">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/mongo-java-driver-2.12.3-javadoc-b9e47f4c19a9fefa490d7e7b0c3cf29e1a0d213a.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/libs/androidplot-core-0.6.1.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3db0daea52375b26bfa61c59b8df93950bdefbbc">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/androidplot-core-0.6.1-c468daddf0325e6a64db1497e1e74963f5bbdca9.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/exploded-aar/SenseAndroid/senseChallengeClient/unspecified/libs/mongo-java-driver-2.12.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="12b7358a7740af71a4a52349d014d526a7a26a65">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/mongo-java-driver-2.12.3-b551a5e4f990a7b96bd885596eed72bccf3c49ec.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/classes-f7d3bd0033b0fc76591a48ab520735a104978786.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/exploded-aar/SenseAndroid/senseChallengeClient/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="635b7b877d814b2ffd3e561981b784211bfbbba2">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/classes-45d011b7ca3888413f0c55768c1e11db054df71f.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/classes-54c0142772ad7b4dc28bc1dada670e47508f6149.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/exploded-aar/SenseAndroid/senseChallengeClient/unspecified/libs/mongo-java-driver-2.12.3-sources.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="c9c84bac2eb0a681fa74f45b525711bd088696dc">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/mongo-java-driver-2.12.3-sources-03807e07f7ca3cc31f571e3288ad50163c1fc522.jar" />
+    </item>
+    <item
+        jar="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-d2c2cd2ede07b6db0a1e1c38c48876cbcae302d9.jar" />
+    </item>
+
+</items>

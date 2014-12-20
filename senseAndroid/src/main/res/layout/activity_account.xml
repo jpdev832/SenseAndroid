@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp" >
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Connection"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <View 
+       	android:id="@+id/hr1"
+	   	android:layout_width="fill_parent"
+	   	android:layout_height="2dp"       
+	   	android:background="#000000"
+	   	android:layout_below="@+id/textView5"/>
+
+    <TextView
+        android:id="@+id/txtHistTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/hr1"
+        android:layout_margin="5dp"
+        android:text="Hostname:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtHistTag"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:hint="sensors.companyname.com" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtHistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtHost"
+        android:layout_margin="5dp"
+        android:text="Port:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtHistName"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="27017" />
+    
+    <TextView
+        android:id="@+id/txtDBView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtPort"
+        android:layout_margin="5dp"
+        android:text="Database:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtDBView"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:hint="sensor_list" >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtDB"
+        android:layout_marginTop="10dp"
+        android:text="Credentials"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <View 
+       	android:id="@+id/hr2"
+	   	android:layout_width="fill_parent"
+	   	android:layout_height="2dp"       
+	   	android:background="#000000"
+	   	android:layout_below="@+id/textView6"/>
+
+    <TextView
+        android:id="@+id/txtHistSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/hr2"
+        android:layout_margin="5dp"
+        android:text="Username:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtHistSession"
+        android:ems="10"
+        android:inputType="textNoSuggestions" >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:id="@+id/txtHistTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtUsername"
+        android:layout_margin="5dp"
+        android:text="Password:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtHistTime"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/btn_acct_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:text="OK" />
+
+    <CheckBox
+        android:id="@+id/chkVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:checked="true"
+        android:text="Verify Account" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="Accelerometer">
+        <item >0</item>
+        <item >1</item>
+        <item >2</item>
+    </integer-array>
+    <integer-array name="AirPressure">
+        <item >0</item>
+    </integer-array>
+    <integer-array name="Gravity">
+        <item >0</item>
+        <item >1</item>
+        <item >2</item>
+    </integer-array>
+    <integer-array name="Gyroscope">
+        <item >0</item>
+        <item >1</item>
+        <item >2</item>
+    </integer-array>
+    <integer-array name="Light">
+        <item >0</item>
+    </integer-array>
+    <integer-array name="MagneticField">
+		<item >0</item>
+        <item >1</item>
+        <item >2</item>
+    </integer-array>
+    <integer-array name="Proximity">
+        <item >0</item>
+    </integer-array>
+</resources>

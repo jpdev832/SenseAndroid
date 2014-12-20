@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="Sensor Settings"
+        android:key="@string/pref_cat_senor_settings">
+        <ListPreference 
+            android:title="Sensor Speed" 
+            android:summary="Choose the rate at which to capture sensor data" 
+            android:key="@string/pref_sensor_speed" 
+            android:entries="@array/sensor_speed" 
+            android:entryValues="@array/sensor_speed_values" 
+            android:defaultValue="3"/>
+        <EditTextPreference 
+            android:title="Buffer Size" 
+            android:summary="Amount to buffer in memory before persisting" 
+            android:defaultValue="10" 
+            android:key="@string/pref_buffer_size"/>
+        <CheckBoxPreference 
+            android:title="GeoTag" 
+            android:summary="Record location when capturing" 
+            android:enabled="true" 
+            android:key="@string/pref_location_enable" 
+            android:defaultValue="false"/>
+        <Preference 
+            android:summary="Configuring a new sensor to capture" 
+            android:title="Add New Sensor" 
+            android:enabled="true">
+            <intent 
+                android:targetPackage="com.staticvillage.sense.android"
+                android:targetClass="com.staticvillage.sense.android.client.SensorListActivity" />
+        </Preference>
+        <CheckBoxPreference 
+            android:title="Offline Mode" 
+            android:summary="Allow data capturing when no connection exists" 
+            android:enabled="true" 
+            android:key="@string/pref_offline_mode" 
+            android:defaultValue="false"/>
+        
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Account Details">
+        <Preference 
+            android:summary="Configure Mongodb account settings" 
+            android:title="Account">
+            <intent 
+                android:targetPackage="com.staticvillage.sense.android"
+                android:targetClass="com.staticvillage.sense.android.client.AccountActivity" />
+        </Preference>
+    </PreferenceCategory>
+    
+
+</PreferenceScreen>

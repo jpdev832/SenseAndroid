@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/txtHistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:text="Tag:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <EditText
+        android:id="@+id/txtTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtHistName"
+        android:focusable="true" 
+        android:focusableInTouchMode="true"
+        android:hint="Add Tag Name"
+        android:ems="10" >
+    </EditText>
+    
+    <com.androidplot.xy.XYPlot
+	    android:id="@+id/mySimpleXYPlot"
+	    android:layout_width="match_parent"
+	    android:layout_height="200dp"
+	    androidplot.renderMode="use_background_thread"
+	    androidPlot.legendWidget.iconSizeMetrics.heightMetric.value="15dp"
+	    androidPlot.legendWidget.iconSizeMetrics.widthMetric.value="15dp"
+	    androidPlot.legendWidget.heightMetric.value="25dp"
+	    androidPlot.legendWidget.positionMetrics.anchor="right_bottom"
+	    androidPlot.graphWidget.gridLinePaint.color="#000000"
+	    android:layout_below="@+id/txtTag">
+        <requestFocus/>
+    </com.androidplot.xy.XYPlot>
+    
+    <ImageView
+        android:id="@+id/imgCapturePlay"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/mySimpleXYPlot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_play_arrow_black_48dp" />
+    
+    <ImageView
+        android:id="@+id/imgCaptureStop"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/mySimpleXYPlot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
+        android:alpha="0.3"
+        android:src="@drawable/ic_stop_black_48dp" />
+
+    <ListView
+        android:id="@+android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mySimpleXYPlot"
+        android:layout_margin="5dp"
+        android:layout_alignParentLeft="true" >
+    </ListView>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mySimpleXYPlot"
+        android:layout_margin="5dp"
+        android:layout_alignParentLeft="true" >
+	    <TextView
+	        android:id="@android:id/empty"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:text="Configure new sensors in settings" />
+    </RelativeLayout>
+
+</RelativeLayout>

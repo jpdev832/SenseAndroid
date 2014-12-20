@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Connection">
+        <EditTextPreference 
+            android:title="Hostname" 
+            android:summary="MongoDB hostname"
+            android:key="@string/pref_hostname"
+            android:inputType="textUri"
+            android:hint="sensor.hostname.com"/>
+        <EditTextPreference 
+            android:title="Port"
+            android:inputType="number"
+            android:summary="MongoDB port (Default:27017)" 
+            android:defaultValue="27017" 
+            android:key="@string/pref_port"
+            android:hint="27017"/>
+        <EditTextPreference 
+            android:title="Database" 
+            android:summary="MongoDB database name"
+            android:key="@string/pref_db"
+            android:inputType="textNoSuggestions"
+        	android:hint="sensors_data"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Credentials">
+        <EditTextPreference 
+            android:title="Username" 
+            android:key="@string/pref_username"
+            android:inputType="text|textNoSuggestions"/>
+        <EditTextPreference 
+            android:title="Password"
+            android:inputType="textPassword" android:key="@string/pref_password"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Create Account">
+        <Preference android:title="ObjectRocket" 
+            android:summary="Scalable, fast, reliable, and automated MongoDB Host">
+            <intent android:action="android.intent.action.VIEW"
+            	android:data="https://objectrocket.com" />
+        </Preference>
+    </PreferenceCategory>
+    
+
+</PreferenceScreen>

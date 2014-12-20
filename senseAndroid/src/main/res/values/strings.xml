@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sensë</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pref_hostname">hostname</string>
+    <string name="pref_port">port</string>
+    <string name="pref_db">db</string>
+    <string name="pref_username">username</string>
+    <string name="pref_password">pass</string>
+    <string name="pref_connection_string">connection_string</string>
+    <string name="pref_verify">verify_acct</string>
+    <string name="pref_sensor_speed">sensor_speed</string>
+    <string name="pref_buffer_size">buffer_size</string>
+
+    <string name="pref_offline_mode">offline_mode</string><string-array name="sensor_speed">
+        <item >slow</item>
+        <item >normal</item>
+        <item >fast</item>
+    </string-array>
+    <string-array name="sensor_speed_values">
+        <item >3</item>
+        <item >1</item>
+        <item >0</item>
+    </string-array>
+    
+    <string-array name="sensor_types">
+        <item >AccelerometerData</item>
+        <item >AirPressureData</item>
+        <item >GravityData</item>
+        <item >GyroscopeData</item>
+        <item >LightData</item>
+        <item >MagneticFieldData</item>
+        <item >ProximityData</item>
+    </string-array>
+    <string-array name="sensors">
+        <item >Accelerometer</item>
+        <item >Air Pressure</item>
+        <item >Gravity</item>
+        <item >Gyroscope</item>
+        <item >Light</item>
+        <item >Magnetic Field</item>
+        <item >Proximity</item>
+    </string-array>
+    <string-array name="sensor_descriptions">
+        <item >Measures proper acceleration ("g-force")</item>
+        <item >Force exerted on a surface by the weight of air</item>
+        <item >Force of gravity</item>
+        <item >Measuring or maintaining orientation</item>
+        <item >Available light in an environment</item>
+        <item >Magnetic influence</item>
+        <item >Detect the presence of nearby objects</item>
+    </string-array>
+    <string name="pref_location_enable">location_enable</string>
+    <string name="pref_cat_senor_settings">cat_sensor_settings</string>
+    
+</resources>

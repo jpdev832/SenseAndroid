@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:orientation="horizontal"
+	        android:baselineAligned="false" >
+	
+	        <RelativeLayout
+	        	android:layout_width="match_parent"
+	        	android:layout_height="150dp"
+	        	android:orientation="horizontal"
+		        android:layout_weight="1" >
+	
+		        <ImageView
+		            android:id="@+id/imgCapture"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/ic_settings_input_antenna_black_48dp" />
+	
+		        <TextView
+		            android:id="@+id/txtHistTag"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/imgCapture"
+		            android:layout_centerHorizontal="true"
+		            android:text="Capture"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+	        	android:layout_width="match_parent"
+	        	android:layout_height="150dp"
+	        	android:orientation="horizontal"
+		        android:layout_weight="1" >
+	        	
+		        <ImageView
+		            android:id="@+id/imgRetrieve"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/ic_assessment_black_48dp" />
+		        
+		        <TextView
+		            android:id="@+id/txtHistName"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/imgRetrieve"
+		            android:layout_centerHorizontal="true"
+		            android:text="Retrieve"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:orientation="horizontal"
+	        android:baselineAligned="false" >
+	        
+	        <RelativeLayout
+	        	android:layout_width="match_parent"
+	        	android:layout_height="150dp"
+	        	android:orientation="horizontal"
+		        android:layout_weight="1" >
+	        	
+		        <ImageView
+		            android:id="@+id/imgHistory"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/ic_history_black_48dp" />
+		        
+		        <TextView
+		            android:id="@+id/txtHistSession"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/imgHistory"
+		            android:layout_centerHorizontal="true"
+		            android:text="History"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+	        	android:layout_width="match_parent"
+	        	android:layout_height="150dp"
+	        	android:orientation="horizontal"
+		        android:layout_weight="1" >
+	        	
+		        <ImageView
+		            android:id="@+id/imgSettings"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/ic_settings_black_48dp" />
+		        
+		        <TextView
+		            android:id="@+id/txtHistTime"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/imgSettings"
+		            android:layout_centerHorizontal="true"
+		            android:text="Settings"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </RelativeLayout>
+	    </LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

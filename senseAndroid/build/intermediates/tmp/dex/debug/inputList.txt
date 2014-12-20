@@ -1,0 +1,10 @@
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/classes/debug
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-a7cdf56ae20862b06f23bc9007dfc137b99c1238.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/classes-45d011b7ca3888413f0c55768c1e11db054df71f.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-d2c2cd2ede07b6db0a1e1c38c48876cbcae302d9.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/androidplot-core-0.6.1-c468daddf0325e6a64db1497e1e74963f5bbdca9.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/mongo-java-driver-2.12.3-b551a5e4f990a7b96bd885596eed72bccf3c49ec.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/classes-f7d3bd0033b0fc76591a48ab520735a104978786.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/mongo-java-driver-2.12.3-sources-03807e07f7ca3cc31f571e3288ad50163c1fc522.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/classes-54c0142772ad7b4dc28bc1dada670e47508f6149.jar
+/Users/joelparrish/AndroidstudioProjects/SenseAndroid/senseAndroid/build/intermediates/pre-dexed/debug/mongo-java-driver-2.12.3-javadoc-b9e47f4c19a9fefa490d7e7b0c3cf29e1a0d213a.jar

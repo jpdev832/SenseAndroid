@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.staticvillage.sense.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        
+        <meta-data
+			android:name="com.google.android.gms.version"
+    		android:value="@integer/google_play_services_version" />
+        
+        <activity
+            android:name="com.staticvillage.sense.android.client.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.staticvillage.sense.android.client.AccountActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:parentActivityName="com.staticvillage.sense.android.client.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.staticvillage.sense.android.client.RetrieveActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:parentActivityName="com.staticvillage.sense.android.client.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.staticvillage.sense.android.client.CaptureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:parentActivityName="com.staticvillage.sense.android.client.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.staticvillage.sense.android.client.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.staticvillage.sense.android.client.MainActivity" >
+        </activity>
+        <activity 
+            android:screenOrientation="landscape" 
+            android:name="com.staticvillage.sense.android.client.GraphActivity" 
+            android:configChanges="keyboardHidden|orientation"
+            android:parentActivityName="com.staticvillage.sense.android.client.RetrieveActivity">
+        </activity>
+        <activity 
+            android:screenOrientation="portrait" 
+            android:name="com.staticvillage.sense.android.client.HistoryActivity" 
+            android:configChanges="keyboardHidden|orientation"
+            android:parentActivityName="com.staticvillage.sense.android.client.MainActivity">
+        </activity>
+        <activity android:screenOrientation="portrait" android:name=".client.SensorListActivity" android:configChanges="keyboardHidden|orientation"></activity>
+        <activity 
+            android:screenOrientation="portrait" 
+            android:name=".client.SensorEditActivity" 
+            android:configChanges="keyboardHidden|orientation"
+            android:parentActivityName="com.staticvillage.sense.android.client.SensorListActivity"></activity>
+    </application>
+
+</manifest>

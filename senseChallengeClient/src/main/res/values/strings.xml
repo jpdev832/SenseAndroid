@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Data Capture Android Client</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string-array name="properties">
+        <item >Accelerometer</item>
+        <item >AirPressure</item>
+        <item >Gravity</item>
+        <item >Gyroscope</item>
+        <item >Light</item>
+        <item >MagneticField</item>
+        <item >Proximity</item>
+    </string-array>
+    
+    <string-array name="Accelerometer_Index">
+        <item >x</item>
+        <item >y</item>
+        <item >z</item>
+    </string-array>
+    <string-array name="AirPressure_Index">
+        <item >units</item>
+    </string-array>
+    <string-array name="Gravity_Index">
+        <item >x</item>
+        <item >y</item>
+        <item >z</item>
+    </string-array>
+    <string-array name="Gyroscope_Index">
+        <item >x</item>
+        <item >y</item>
+        <item >z</item>
+    </string-array>
+    <string-array name="Light_Index">
+        <item >lux</item>
+    </string-array>
+    <string-array name="MagneticField_Index">
+        <item >x</item>
+        <item >y</item>
+        <item >z</item>
+    </string-array>
+    <string-array name="Proximity_Index">
+        <item >millimeters</item>
+    </string-array>
+
+</resources>

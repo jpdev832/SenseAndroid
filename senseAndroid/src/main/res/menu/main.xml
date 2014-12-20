@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/ab_account" 
+        android:orderInCategory="10" 
+        android:title="Account Settings"
+        android:icon="@drawable/ic_account_box_black_48dp" android:showAsAction="always" android:enabled="true" android:visible="true"></item>
+
+</menu>
