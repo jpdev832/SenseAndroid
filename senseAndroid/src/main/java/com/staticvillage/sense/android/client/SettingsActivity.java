@@ -11,10 +11,12 @@ public class SettingsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		ActionBar actionBar = getActionBar();
-		actionBar.setDisplayShowHomeEnabled(true);
-		
-		getFragmentManager().beginTransaction()
-			.replace(android.R.id.content, new GeneralSettingsFragment(this))
+        if (actionBar != null) {
+            actionBar.setDisplayShowHomeEnabled(true);
+        }
+
+        getFragmentManager().beginTransaction()
+			.replace(android.R.id.content, new GeneralSettingsFragment())
 			.commit();
 	}
 	

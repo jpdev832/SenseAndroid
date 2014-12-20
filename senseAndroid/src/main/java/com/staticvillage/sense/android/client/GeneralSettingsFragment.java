@@ -4,20 +4,13 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.staticvillage.sense.android.R;
 
-import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.PreferenceFragment;
 import android.util.Log;
 
 public class GeneralSettingsFragment extends PreferenceFragment {
-	private Context context;
-	
-	public GeneralSettingsFragment(Context context){
-		this.context = context;
-	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -41,7 +34,7 @@ public class GeneralSettingsFragment extends PreferenceFragment {
 	 */
 	private boolean servicesConnected() {
         // Check that Google Play services is available
-        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity());
         
         if (ConnectionResult.SUCCESS == resultCode) {
             Log.d("Sense","Google Play services is available.");
@@ -50,7 +43,7 @@ public class GeneralSettingsFragment extends PreferenceFragment {
             // Get the error dialog from Google Play services
             Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog(
                     resultCode,
-                    (Activity)context,
+                    getActivity(),
                     1324);
 
             // If Google Play services can provide an error dialog

@@ -4,7 +4,6 @@ import java.io.File;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -33,9 +32,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.util.SparseArrayCompat;
 import android.util.Log;
-import android.util.SparseArray;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -52,13 +49,10 @@ public class CaptureActivity extends ListActivity implements Observer {
 	private EditText txtTag;
 	private String connString;
 	private String db;
-	private int bufferSize;
-	private int[] colors;
+    private int[] colors;
 	private SensorAdapter adapter;
 	private HashMap<String, SimpleXYSeries[]> seriesMap;
-	private HashMap<String, SensorDetail> chkMap;
 	private HashMap<String, SensorInfo> sensorInfo;
-    private SparseArray<String> mSelectedSensors;
 	private boolean locationEnabled;
 	private boolean offlineMode;
 	
@@ -105,9 +99,11 @@ public class CaptureActivity extends ListActivity implements Observer {
 		});
 		
 		ActionBar actionbar = getActionBar();
-		actionbar.setDisplayHomeAsUpEnabled(true);
-		actionbar.setTitle("Capture");
-		actionbar.setIcon(R.drawable.ic_home_black_48dp);
+        if (actionbar != null) {
+            actionbar.setDisplayHomeAsUpEnabled(true);
+            actionbar.setTitle("Capture");
+            actionbar.setIcon(R.drawable.ic_home_black_48dp);
+        }
 		
 		init();
 	}
@@ -142,7 +138,7 @@ public class CaptureActivity extends ListActivity implements Observer {
 		SimpleXYSeries[] series = seriesMap.get(data.getName());
 		
 		for(int i=0; i<values.length; i++){
-			addDataPoint(series[i], data.timestamp, values[i]);
+			addDataPoint(series[i], values[i]);
 		}
 		
 		plot.redraw();
@@ -155,7 +151,7 @@ public class CaptureActivity extends ListActivity implements Observer {
 		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
 		this.connString = pref.getString(AccountActivity.KEY_CONN_STR, "");
 		this.db = pref.getString(AccountActivity.KEY_DB, "");
-		this.bufferSize = Integer.valueOf(pref.getString(getString(R.string.pref_buffer_size), "10"));
+        int bufferSize = Integer.valueOf(pref.getString(getString(R.string.pref_buffer_size), "10"));
 		this.locationEnabled = pref.getBoolean(getString(R.string.pref_location_enable), false);
 		this.offlineMode = pref.getBoolean(getString(R.string.pref_offline_mode), false);
 		
@@ -177,8 +173,8 @@ public class CaptureActivity extends ListActivity implements Observer {
 		
 		sensorInfo = new HashMap<String, SensorInfo>();
 		SensorInfo[] sensors = SensorInfoManager.loadSensorInfo(this);
-		for(int i=0;i<sensors.length;i++){
-			sensorInfo.put(sensors[i].name, sensors[i]);
+		for(SensorInfo info : sensors){
+			sensorInfo.put(info.name, info);
 		}
 		
 		initSeries();
@@ -232,7 +228,6 @@ public class CaptureActivity extends ListActivity implements Observer {
 	 * Initialize list with sensors
 	 */
 	public void initList(){
-		chkMap = new HashMap<String, SensorDetail>();
 		ArrayList<SensorDetail> sd = new ArrayList<SensorDetail>(sensorInfo.size());
 		for(SensorInfo info : sensorInfo.values()){
 			SensorDetail d = new SensorDetail();
@@ -241,7 +236,6 @@ public class CaptureActivity extends ListActivity implements Observer {
 			d.checked = false;
 			
 			sd.add(d);
-			chkMap.put(info.name, d);
 		}
 		
 		adapter = new SensorAdapter(this, sd);
@@ -252,15 +246,19 @@ public class CaptureActivity extends ListActivity implements Observer {
 	 * Add a data point to the graph
 	 * 
 	 * @param series series to add data point to
-	 * @param timestamp timestamp of data point
 	 * @param value data point value
 	 */
-	public void addDataPoint(SimpleXYSeries series, long timestamp, double value){
+	public void addDataPoint(SimpleXYSeries series, double value){
 		if(series.size() > MAX_HISTORY){
 			series.removeFirst();
-			series.addLast(timestamp, value);
+			series.addLast(MAX_HISTORY, value);
 		}else
-			series.addLast(timestamp, value);
+			series.addLast(series.size(), value);
+
+        //re-number to give even look
+        for(int i=0;i<series.size();i++){
+            series.setX(i, i);
+        }
 	}
 	
 	/**
@@ -273,7 +271,7 @@ public class CaptureActivity extends ListActivity implements Observer {
 		plot.clear();
 		
 		int counter = 0;
-		int index = 0;
+		int index;
 		
 		String[] names = adapter.getEnabled();
 		for(String name : names){
@@ -293,7 +291,7 @@ public class CaptureActivity extends ListActivity implements Observer {
 			else
 				logger.disableLocation();
 			
-			String session = "";
+			String session;
 			if(offlineMode){
 				File file = new File(getFilesDir(), logger.getSessionId());
 				session = logger.start(file, txtTag.getText().toString());
@@ -331,9 +329,10 @@ public class CaptureActivity extends ListActivity implements Observer {
 	/**
 	 * Enable/Disable editing
 	 * 
-	 * @param enabled
+	 * @param enabled editing enabled
 	 */
 	public void enableEdit(boolean enabled){
-		txtTag.setEnabled(enabled);
+        txtTag.setEnabled(enabled);
+        adapter.setEnabled(enabled);
 	}
 }

@@ -1,8 +1,6 @@
 package com.staticvillage.sense.android.client.adapter;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 import com.staticvillage.sense.android.R;
 import com.staticvillage.sense.android.client.data.SensorDetail;
@@ -10,7 +8,6 @@ import com.staticvillage.sense.android.client.data.SensorDetail;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,17 +20,23 @@ public class SensorAdapter extends ArrayAdapter<SensorDetail> implements OnClick
     private Context context;
     private ArrayList<SensorDetail> data;
     private ArrayList<String> selected;
+    private boolean enabled;
     
     public SensorAdapter(Context context, ArrayList<SensorDetail> data) {
         super(context, R.layout.list_item_capture, data);
         this.context = context;
         this.data = data;
+        this.enabled = true;
 
         selected = new ArrayList<String>(data.size());
     }
     
     public String[] getEnabled(){
     	return selected.toArray(new String[]{});
+    }
+
+    public void setEnabled(boolean enabled){
+        this.enabled = enabled;
     }
 
 	@Override
@@ -64,7 +67,7 @@ public class SensorAdapter extends ArrayAdapter<SensorDetail> implements OnClick
 	@Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
-        SensorItemHolder holder = null;
+        SensorItemHolder holder;
         
         if(row == null)
         {
@@ -103,28 +106,30 @@ public class SensorAdapter extends ArrayAdapter<SensorDetail> implements OnClick
 
 	@Override
 	public void onClick(View v) {
-		SensorItemHolder item = (SensorItemHolder)v.getTag();
-        boolean state = !item.chkUse.isChecked();
-        String name = item.txtName.getText().toString();
+        if(enabled) {
+            SensorItemHolder item = (SensorItemHolder) v.getTag();
+            boolean state = !item.chkUse.isChecked();
+            String name = item.txtName.getText().toString();
 
-        item.chkUse.setChecked(state);
+            item.chkUse.setChecked(state);
 
-	    if(state){
-            selected.add(name);
-        }else{
-            int index = -1;
-            for(int i=0;i<selected.size();i++) {
-                if (selected.get(i).equals(name)) {
-                    index = i;
-                    break;
+            if (state) {
+                selected.add(name);
+            } else {
+                int index = -1;
+                for (int i = 0; i < selected.size(); i++) {
+                    if (selected.get(i).equals(name)) {
+                        index = i;
+                        break;
+                    }
                 }
+
+                if (index > -1)
+                    selected.remove(index);
             }
 
-            if(index > -1)
-                selected.remove(index);
+            Log.d("sense", String.format("name: %s, Checked: %b", name, item.chkUse.isChecked()));
         }
-
-	    Log.d("sense", String.format("name: %s, Checked: %b", name, item.chkUse.isChecked()));
 	}
     
 }
