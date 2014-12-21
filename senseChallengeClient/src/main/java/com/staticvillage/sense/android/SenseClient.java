@@ -198,8 +198,7 @@ public class SenseClient {
 	
 	/**
 	 * Connect locally to store captured sensor data in a file
-	 * 
-	 * @param context Context
+	 *
 	 * @return Session ID
 	 */
 	public String connect(File file){
@@ -288,11 +287,7 @@ public class SenseClient {
 	
 	/**
 	 * Upload captured sensor information from a file to a MongoDB instance
-	 * 
-	 * @param context Context
-	 * @param connectionString MongoDB connection string
-	 * @param db MongoDB database
-	 * @param sessionId session Identifier
+	 *
 	 * @throws IOException 
 	 */
 	public void uploadFromFile(File file) throws IOException{
@@ -327,6 +322,7 @@ public class SenseClient {
 			msg.obj = payload;
 			
 			mRunner.mHandler.sendMessage(msg);
+            i++;
 		}
 	}
 	

@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.media.Image;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,16 +70,16 @@ public class HistoryCursorAdapter extends SimpleCursorAdapter {
     }
     
     public void update(String sessionId) {
-    	ArrayList<Integer> indices = new ArrayList<Integer>();
+    	ArrayList<ImageView> views = new ArrayList<ImageView>();
 		for(int i=0; i<uploadViews.size(); i++){
 			if(((String)uploadViews.get(i).getTag()).equals(sessionId)){
-				indices.add(i);
+				views.add((ImageView)uploadViews.get(i));
 				uploadViews.get(i).setImageResource(R.drawable.ic_cloud_done_black_48dp);
 			}
     	}
 		
-		for(int i : indices)
-			uploadViews.remove(i);
+		for(ImageView view : views)
+			uploadViews.remove(view);
 	}
 
 	@Override

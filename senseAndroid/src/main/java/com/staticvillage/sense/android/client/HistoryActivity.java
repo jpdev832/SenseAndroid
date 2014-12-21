@@ -91,6 +91,8 @@ public class HistoryActivity extends ListActivity implements OnClickListener, Se
 			progressDialog.show();
 		} catch (IOException e) {
 			e.printStackTrace();
+            Toast.makeText(this, "Error occurred while uploading data", Toast.LENGTH_SHORT).show();
+            progressDialog.dismiss();
 		}
 	}
 
