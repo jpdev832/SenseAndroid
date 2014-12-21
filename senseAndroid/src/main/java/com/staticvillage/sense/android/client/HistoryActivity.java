@@ -86,9 +86,9 @@ public class HistoryActivity extends ListActivity implements OnClickListener, Se
 		
 		File file = new File(getFilesDir(), sessionId);
 		try {
+            progressDialog.setTitle("Uploading Data...");
+            progressDialog.show();
 			client.uploadFromFile(file);
-			progressDialog.setTitle("Uploading Data...");
-			progressDialog.show();
 		} catch (IOException e) {
 			e.printStackTrace();
             Toast.makeText(this, "Error occurred while uploading data", Toast.LENGTH_SHORT).show();
